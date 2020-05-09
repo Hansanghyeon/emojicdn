@@ -1,0 +1,14 @@
+version: "3.1"
+
+services:
+  node:
+    container_name: emojicdn-node
+    image: docker.pkg.github.com/hansanghyeon/emojicdn/emojicdn:1.0.0
+    ports:
+      - 32772:8080
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
